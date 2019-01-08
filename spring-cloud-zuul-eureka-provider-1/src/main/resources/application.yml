@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+
+spring:
+  application:
+    name: eureka-user
+  cloud: 
+    config: 
+      label: master
+      profile: dev
+      discovery: 
+        enabled: true
+        serviceId: config-server 
+server:
+  port: 8081
+  
+ 
+ 
+management: 
+  security: 
+    enabled: false
+  
